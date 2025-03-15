@@ -64,11 +64,11 @@ const skills = [
 ];
 
 export default function Skills() {
-  const [selectedSkill, setSelectedSkill] = useState(null);
+  const [selectedSkill, setSelectedSkill] = useState<any>(null);
   const [hasAnimated, setHasAnimated] = useState(false);
   const [showCentralText, setShowCentralText] = useState(true);
   const [showSkillDescription, setShowSkillDescription] = useState(false);
-  const sectionRef = useRef(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -94,7 +94,7 @@ export default function Skills() {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white relative overflow-hidden"
+      className="min-h-screen flex flex-col items-center justify-center bg-primary text-white relative overflow-hidden"
     >
       <div className="relative w-[800px] h-[800px] flex items-center justify-center">
         {/* Testo centrale */}
@@ -105,10 +105,10 @@ export default function Skills() {
             transition={{ duration: 1 }}
             className="absolute text-center max-w-md z-10"
           >
-            <h2 className="text-4xl font-bold mb-4 text-[#646cff]">
+            <h2 className="text-4xl font-bold mb-4 text-accent">
               Skills & Tools
             </h2>
-            <p className="text-lg">
+            <p className="text-lg text-white/80">
               Ecco le tecnologie con cui lavoro quotidianamente, suddivise tra
               sviluppo frontend, backend e strumenti essenziali.
             </p>
@@ -148,10 +148,10 @@ export default function Skills() {
                   } else {
                     setSelectedSkill(skill);
                     setShowCentralText(false);
-                    setShowSkillDescription(false); // reset descrizione
+                    setShowSkillDescription(false);
                     setTimeout(() => {
                       setShowSkillDescription(true);
-                    }, 800); // mostra descrizione dopo arrivo al centro
+                    }, 800);
                   }
                 }}
                 whileHover={{ scale: isSelected ? 1.2 : 1.1 }}
@@ -164,7 +164,7 @@ export default function Skills() {
                   tiltMaxAngleY={15}
                   className="rounded-xl"
                 >
-                  <div className="text-6xl p-6 rounded-2xl bg-gradient-to-br from-gray-700 to-gray-900 border border-gray-800">
+                  <div className="text-6xl p-6 rounded-2xl bg-gradient-skill  border-secondary">
                     {skill.icon}
                   </div>
                 </Tilt>
@@ -177,9 +177,7 @@ export default function Skills() {
                     transition={{ duration: 0.5 }}
                     className="mt-4 text-center w-64"
                   >
-                    <p className="text-base text-gray-300">
-                      {skill.description}
-                    </p>
+                    <p className="text-base text-muted">{skill.description}</p>
                   </motion.div>
                 )}
               </motion.div>

@@ -9,3 +9,39 @@
 body::-webkit-scrollbar {
   display: none; /* Chrome, Safari */
 }
+
+/* Colori personalizzati */
+.bg-primary {
+  background-color: #494236;
+}
+
+.bg-secondary {
+  background-color: #1d2c2b;
+}
+
+.text-accent {
+  color: #f9c449;
+}
+
+.bg-accent {
+  background-color: #f9c449;
+}
+
+.text-primary {
+  color: #494236;
+}
+
+.text-secondary {
+  color: #1d2c2b;
+}
+
+.hover-accent:hover {
+  color: #f9c449;
+}
+
+.bg-gradient-skill {
+  background: linear-gradient(to bottom right, #3f3a32, #1d2c2b);
+}
+.text-muted {
+  color: rgba(255, 255, 255, 0.8);
+}

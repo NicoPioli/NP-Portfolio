@@ -1,18 +1,12 @@
-import { motion } from "framer-motion";
-
 export default function Home() {
   return (
-    <section className="h-screen flex items-center justify-center bg-gradient-to-b from-gray-900 to-black text-white">
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <h1 className="text-5xl font-bold">Ciao, sono Nicolò Pioli</h1>
-        <p className="text-xl mt-2">
-          Full-Stack Developer specializzato in React & Spring Boot
+    <section className="min-h-screen bg-primary text-white flex items-center justify-center">
+      <div className="text-center">
+        <h1 className="text-5xl font-bold text-accent">Ciao, sono Nicolò</h1>
+        <p className="mt-4 text-lg text-white/80">
+          Full Stack Developer specializzato in React, Angular e Spring Boot.
         </p>
-      </motion.div>
+      </div>
     </section>
   );
 }

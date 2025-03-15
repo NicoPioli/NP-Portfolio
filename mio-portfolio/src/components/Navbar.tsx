@@ -2,13 +2,13 @@ import { Link } from "react-scroll";
 
 export default function Navbar() {
   return (
-    <nav className="fixed top-0 w-full bg-gray-900 text-white p-4 z-50">
+    <nav className="fixed top-0 w-full bg-primary text-white p-4 z-50">
       <div className="container mx-auto flex justify-center space-x-6">
         <Link
           to="home"
           smooth={true}
           duration={500}
-          className="cursor-pointer hover:text-gray-400"
+          className="cursor-pointer hover-accent"
         >
           Home
         </Link>
@@ -16,7 +16,7 @@ export default function Navbar() {
           to="about"
           smooth={true}
           duration={500}
-          className="cursor-pointer hover:text-gray-400"
+          className="cursor-pointer hover-accent"
         >
           About
         </Link>
@@ -24,7 +24,7 @@ export default function Navbar() {
           to="skills"
           smooth={true}
           duration={500}
-          className="cursor-pointer hover:text-gray-400"
+          className="cursor-pointer hover-accent"
         >
           Skills
         </Link>
@@ -32,7 +32,7 @@ export default function Navbar() {
           to="projects"
           smooth={true}
           duration={500}
-          className="cursor-pointer hover:text-gray-400"
+          className="cursor-pointer hover-accent"
         >
           Projects
         </Link>
@@ -40,7 +40,7 @@ export default function Navbar() {
           to="contact"
           smooth={true}
           duration={500}
-          className="cursor-pointer hover:text-gray-400"
+          className="cursor-pointer hover-accent"
         >
           Contact
         </Link>

@@ -89,7 +89,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-gray-900 text-white relative">
+    <div className="bg-primary text-white relative">
       <Navbar />
 
       <ScrollElement name="home">
