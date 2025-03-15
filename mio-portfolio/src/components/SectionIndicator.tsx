@@ -7,7 +7,6 @@ interface SectionIndicatorProps {
   totalSections: number;
   sectionBackgrounds: ("light" | "dark")[];
   sections: string[];
-  onSectionSelect: (index: number) => void;
 }
 
 const SectionIndicator: React.FC<SectionIndicatorProps> = ({
@@ -15,7 +14,6 @@ const SectionIndicator: React.FC<SectionIndicatorProps> = ({
   totalSections,
   sectionBackgrounds,
   sections,
-  onSectionSelect,
 }) => {
   return (
     <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-3">
@@ -23,7 +21,6 @@ const SectionIndicator: React.FC<SectionIndicatorProps> = ({
         const isActive = index === currentSection;
         const bgType = sectionBackgrounds[currentSection] || "dark";
 
-        // Palette personalizzata applicata ai dots
         const activeDotColor = bgType === "dark" ? "bg-accent" : "bg-primary";
         const inactiveDotColor =
           bgType === "dark" ? "bg-secondary" : "bg-white/80";
@@ -32,7 +29,7 @@ const SectionIndicator: React.FC<SectionIndicatorProps> = ({
           <motion.div
             key={index}
             onClick={() => {
-              onSectionSelect(index);
+              // SOLO scroll, nessun setCurrentSection
               scroller.scrollTo(sections[index], {
                 duration: 800,
                 smooth: "easeInOutQuart",

@@ -90,7 +90,7 @@ export default function App() {
 
   return (
     <div className="bg-primary text-white relative">
-      <Navbar />
+      <Navbar setCurrentSection={setCurrentSection} />
 
       <ScrollElement name="home">
         <Home />
@@ -113,7 +113,6 @@ export default function App() {
         totalSections={sections.length}
         sectionBackgrounds={sectionBackgrounds}
         sections={sections}
-        onSectionSelect={(index) => setCurrentSection(index)}
       />
     </div>
   );
